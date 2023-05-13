@@ -13,7 +13,7 @@
     />
     <title>Platzi Travel</title>
   </head>
-  <body class="font-Montserrat">
+  <body class="font-Montserrat ">
     <!---- Header section -->
     <!-- <header class="">
       <nav>
@@ -32,28 +32,38 @@
             class="flex flex-col justify-around items-center h-screen bg-cover bg-center bg-no-repeat bg-sanFrancisco"
           >
             <input
-              class="rounded-full p-2 relative shadow-sm text-sm font-medium outline-none outline"
+              class="rounded-full p-2 relative shadow-sm text-sm font-medium outline-none outline focus focus:text-primary font-semibold"
               type="search"
               placeholder="San Francisco"
             />
             <button
-              class="bg-white rounded-full text-primary font-bold p-4 w-48 shadow-sm hover:bg-primary hover:text-white transition-all"
+              class="bg-white rounded-full text-primary font-bold p-4 w-48 shadow-sm hover:bg-primary hover:text-white hover:scale-110 transition-all duration-500"
             >
               Explore
             </button>
           </div>
         </article>
       </section>
-      <!---- our recommendations---->
+      <!---- our recommendations ---->
       <section class="flex flex-col">
         <h2 class="text-xl font-semibold text-primary m-3">
           Our Recommendations
         </h2>
         <div
-          class="flex flex-row flex-nowrap p-5 gap-6 overflow-x-scroll "
+          class="flex flex-row flex-nowrap p-5 mt-6 items-center gap-7 overflow-x-scroll "
           id="slider-cards"
         >
         </div>
+      </section>
+      <!---- Trending Stays -->
+      <section class="flex flex-col h-auto px-6">
+        <h2 class="text-xl font-semibold text-primary m-3">Trending Stays</h2>
+        <app-card data-title="Chicago" data-image="./assets/img/chicago.jpg" data-text="2 rooms, bathroom and kitchen."></app-card>
+        <app-card data-title="Miami" data-image="./assets/img/miami.jpg" data-text="3 rooms, 2 bathrooms,  kitchen and amazing 
+        sea view."></app-card>
+        <app-card data-title="Bali" data-image="./assets/img/bali.jpg" data-text="2 rooms, 2 bathrooms,  kitchen and private
+        pool."></app-card>
+        <app-card data-title="Los Angeles" data-image="./assets/img/LA.png" data-text="4 rooms, 3 bathrooms,  kitchen and private pool."></app-card>
       </section>
     </main>
     <script src="./index.js"></script>

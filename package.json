@@ -1,13 +1,13 @@
 {
   "name": "platzitravel",
   "version": "1.0.0",
-  "description": "",
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch"
   },
   "keywords": [],
   "author": "Maximiliano Vera <maxi200vera@gmail.com>",
-  "license": "ISC"
+  "license": "MIT",
+  "description": ""
 }
