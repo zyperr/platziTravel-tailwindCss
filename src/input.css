@@ -4,14 +4,14 @@
 
 
 .card {
-    @apply w-52 h-64 shadow-md rounded-lg flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl
+    @apply w-52 h-64 shadow-md rounded-lg flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl;
 }
 
 .card-image{
-    @apply w-52 h-3/5 rounded-t-lg bg-cover bg-center
+    @apply w-52 h-3/5 rounded-t-lg bg-cover bg-center bg-fixed;
 }
 .card-details-blue{
-    @apply w-52 h-2/5 bg-white text-terciary rounded-b-lg
+    @apply w-52 h-2/5 bg-white text-terciary rounded-b-lg;
 }
 .card-details-green {
     @apply w-52 h-2/5 bg-secondary text-white rounded-b-lg;
@@ -23,4 +23,3 @@
 .card-decription{
     @apply px-4 whitespace-nowrap
 }
-

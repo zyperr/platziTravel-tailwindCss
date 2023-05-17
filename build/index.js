@@ -101,9 +101,19 @@ class Cards extends HTMLElement {
     </div>
     </div>`;
   }
-
 }
 
 customElements.define("app-card", Cards);
 
-dinamCard("div","h3","p")
+dinamCard("div", "h3", "p");
+
+const tabLinks = document.querySelectorAll(".tab-link");
+tabLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // Elimina la clase "active" de todos los enlaces
+    tabLinks.forEach(allLinks => allLinks.classList.remove('text-primary'));
+    
+    // Agrega la clase "active" solo al enlace clicado
+    this.classList.add('text-primary');
+  });
+});
