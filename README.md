@@ -27,7 +27,7 @@ The page show information about travels and Accommodation.The page design can be
 
 ![platzi travel](./build/assets/img/platziTravel5.png)
 
-![platzi travel](./build/assets/img/platziTravel6.png)
+![platzi travel](./build/assets/img/PlatziTravel6.png)
 
 ![platzi travel](./build/assets/img/platziTravel7.png)
 ## Requirements 
