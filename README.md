@@ -29,6 +29,7 @@ The page show information about travels and Accommodation.The page design can be
 
 ![platzi travel](./build/assets/img/platziTravel6.png)
 
+![platzi travel](./build/assets/img/platziTravel7.png)
 ## Requirements 
 
 Before starting , you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
