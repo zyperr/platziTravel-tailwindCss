@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth transition-colors">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Platzi Travel</title>
   </head>
-  <body class="font-Montserrat relative">
+  <body class="font-Montserrat relative dark:gray-800">
     <!---- Header section -->
-    <header class="text-primary font-bold text-lg sm:hidden md:hidden lg:flex p-4">
+    <header
+      class="text-primary font-bold text-lg max-[764px]:hidden md:flex lg:flex p-4 dark:bg-gray-800 fixed w-full z-30 bg-white"
+    >
       <nav class="flex flex-row justify-around w-full">
         <h1>Platzi Travel</h1>
         <ul class="flex flex-row justify-between gap-12">
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Stays</a></li>
-          <li><a href="#">FAQS</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#home" class="hover:text-red-400">Locations</a></li>
+          <li><a href="#trending" class="hover:text-red-400">Stays</a></li>
+          <li><a href="#faqs" class="hover:text-red-400">FAQS</a></li>
+          <li><a href="#aboutUs" class="hover:text-red-400">About Us</a></li>
         </ul>
         <div class="flex flex-row gap-6 text-gray-200">
-          <a href="#" class="tab-link">
+          <a href="#" class="tab-link hover:text-red-400">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
-          <button class="tab-link">
+          <button class="tab-link dark-toggle" >
             <i class="fa-solid fa-moon text-primary"></i>
           </button>
 
-          <a href="#" class="tab-link">
+          <a href="#" class="tab-link hover:text-red-400">
             <i class="fa-solid fa-user"></i>
           </a>
         </div>
@@ -39,108 +44,117 @@
       <section id="home">
         <article class="w-full h-auto">
           <div
-            class="flex flex-col justify-around items-center h-screen bg-cover bg-center bg-no-repeat bg-sanFrancisco lg:bg-sanFranciscoDesktop lg:justify-center lg:items-start"
+            class="flex flex-col justify-around items-center h-screen bg-cover bg-center bg-no-repeat bg-sanFrancisco md:bg-sanFranciscoDesktop md:justify-center md:items-start"
           >
-            <div class="m-5 p-7">
-              <h2 class="text-3xl font-bold text-black w-80">
-                Find More Locations like this
-              </h2>
-              <input
-                class="rounded-full p-2 relative shadow-sm text-sm outline-none outline focus focus:text-primary font-semibold lg:hidden"
-                type="search"
-                placeholder="San Francisco"
-                id="search"
-              />
-              <button
-                class="bg-white rounded-full text-primary font-bold p-4 w-48 shadow-sm hover:bg-primary hover:text-white hover:scale-110 transition-all duration-500 lg:mt-8"
-              >
-                Explore
-              </button>
-            </div>
+            <h2
+              class="text-3xl font-bold text-black w-80 max-[764px]:hidden md:block md:ml-6"
+            >
+              Find More Locations like this
+            </h2>
+            <input
+              class="rounded-full p-2 relative shadow-sm text-sm outline-none outline focus focus:text-primary font-semibold sm:block md:hidden lg:hidden"
+              type="search"
+              placeholder="San Francisco"
+              id="search"
+            />
+            <button
+              class="bg-white rounded-full text-primary font-bold p-4 w-48 shadow-sm hover:bg-primary hover:text-white hover:scale-110 transition-all duration-500 md:mt-8 md:ml-6"
+            >
+              Explore
+            </button>
           </div>
         </article>
       </section>
       <!---- our recommendations ---->
-      <section class="flex flex-col" id="recommend">
-        <h2 class="text-xl font-semibold text-primary m-3">
+      <section class="flex flex-col dark:bg-gray-800" id="recommend">
+        <h2 class="text-xl font-semibold text-primary m-3 lg:text-2xl">
           Our Recommendations
         </h2>
         <div
-          class="flex flex-row flex-nowrap p-5 mt-6 items-center gap-7 overflow-x-scroll lg:flex lg:flex-row lg:items-center lg:justify-center"
+          class="flex flex-row flex-nowrap p-5 mt-6 items-center gap-7 overflow-x-scroll lg:flex lg:flex-row lg:items-center lg:justify-left lg:py-7"
           id="slider-cards"
         ></div>
       </section>
       <!---- Trending Stays -->
-      <section class="flex flex-col h-auto px-6" id="trending">
-        <h2 class="text-xl font-semibold text-primary m-3">Trending Stays</h2>
+      <section class="flex flex-col h-auto px-6 dark:bg-gray-800" id="trending">
+        <h2 class="text-xl font-semibold text-primary m-3 py-5 lg:text-2xl">Trending Stays</h2>
         <app-card
+          class="lg:h-[28rem] lg:my-2"
           data-title="Chicago"
-          data-image="./assets/img/chicago.jpg"
+          data-image="bg-chicago"
           data-text="2 rooms, bathroom and kitchen."
         ></app-card>
-        <app-card
-          data-title="Miami"
-          data-image="./assets/img/miami.jpg"
-          data-text="3 rooms, 2 bathrooms,  kitchen and amazing 
-        sea view."
-        ></app-card>
-        <app-card
-          data-title="Bali"
-          data-image="./assets/img/bali.jpg"
-          data-text="2 rooms, 2 bathrooms,  kitchen and private
+        <div class="gap-5 lg:flex lg:h-1/3 items-center lg:my-5">
+          <app-card
+            class="lg:h-[39rem] lg:w-[70%]"
+            data-title="Los Angeles"
+            data-image="bg-LA"
+            data-text="4 rooms, 3 bathrooms,  kitchen and private pool."
+          ></app-card>
+          <div class="flex flex-col w-full h-full">
+            <app-card
+            class="lg:h-[19rem] lg:w-full lg:my-2"
+              data-title="Bali"
+              data-image="bg-bali"
+              data-text="2 rooms, 2 bathrooms,  kitchen and private
         pool."
-        ></app-card>
-        <app-card
-          data-title="Los Angeles"
-          data-image="./assets/img/LA.webp"
-          data-text="4 rooms, 3 bathrooms,  kitchen and private pool."
-        ></app-card>
+            ></app-card>
+            <app-card
+            class="lg:h-[19rem] lg:w-full lg:my-2"
+              data-title="Miami"
+              data-image="bg-miami"
+              data-text="3 rooms, 2 bathrooms,  kitchen and amazing 
+      sea view."
+            ></app-card>
+          </div>
+        </div>
       </section>
       <!----FAQS section-->
-      <section class="flex flex-col w-full h-full">
-        <h3 class="text-primary text-xl font-bold mx-6">FAQs</h3>
+      <section class="flex flex-col w-full h-full py-5 dark:bg-gray-800" id="faqs">
+        <h3 class="text-primary text-xl font-bold mx-6 lg:text-2xl dark:text-white">FAQs</h3>
         <div class="w-full h-full px-6 py-3">
-          <h4 class="text-base text-primary pb-1 font-semibold">
+          <h4 class="text-base text-primary pb-1 font-semibold lg:text-2xl dark:text-white">
             Payment Methods
           </h4>
-          <p class="font-medium text-xs">
+          <p class="font-medium text-base lg:text-lg dark:text-gray-400">
             We accept VISA, MasterCard, American Express, Paypal and Binance
           </p>
         </div>
         <div class="w-full h-full px-6 py-3">
-          <h4 class="text-base text-primary pb-2 font-semibold">
+          <h4 class="text-base text-primary pb-2 font-semibold lg:text-2xl dark:text-white">
             Cancellation Policy
           </h4>
-          <p class="font-medium text-xs">
+          <p class="font-medium text-base lg:text-lg dark:text-gray-400">
             We accept VISA, MasterCard, American Express, Paypal and Binance
           </p>
         </div>
         <div class="w-full h-full px-6 py-3">
-          <h4 class="text-base text-primary pb-1 font-semibold">Long Stays</h4>
-          <p class="text-base font-medium text-xs">
+          <h4 class="text-base text-primary pb-1 font-semibold lg:text-2xl dark:text-white">Long Stays</h4>
+          <p class="font-medium text-base lg:text-lg dark:text-gray-400">
             We accept VISA, MasterCard, American Express, Paypal and Binance We
             accept VISA, MasterCard, American Express, Paypal and Binance
           </p>
         </div>
         <div class="w-full h-full px-6 py-3">
-          <h4 class="text-base text-primary pb-1 font-semibold">
+          <h4 class="text-base text-primary pb-1 font-semibold lg:text-2xl dark:text-white">
             Payment Methods
           </h4>
-          <p class="font-medium text-xs">
+          <p class="font-medium text-base lg:text-lg dark:text-gray-400">
             We accept VISA, MasterCard, American Express, Paypal and Binance
           </p>
         </div>
         <div class="w-full h-full px-6 py-3">
-          <h4 class="text-base text-primary pb-1 font-semibold">
+          <h4 class="text-base text-primary pb-1 font-semibold lg:text-2xl dark:text-white">
             Payment Methods
           </h4>
-          <p class="font-medium text-xs">
+          <p class="font-medium text-base lg:text-lg dark:text-gray-400">
             We accept VISA, MasterCard, American Express, Paypal and Binance
           </p>
         </div>
       </section>
       <footer
         class="flex flex-col px-2 py-3 w-full h-full font-medium bg-gray-50 pl-5"
+        id="aboutUs"
       >
         <h3 class="pb-2 text-lg font-semibold text-gray-300">About Us</h3>
         <ul class="flex gap-3 flex-col text-sm mb-2 text-gray-300">
@@ -164,7 +178,7 @@
       </footer>
       <!---Tabar-->
       <section
-        class="flex flex-row justify-center items-center gap-6 text-xl my-2 text-gray-200 sticky bottom-0 bg-white py-2 lg:hidden"
+        class="flex flex-row justify-center items-center gap-6 text-xl text-gray-200 sticky bottom-0 z-10 bg-white py-2 md:hidden dark:bg-gray-800"
       >
         <a href="#home" class="tab-link">
           <i class="fa-solid fa-house"></i>
@@ -178,7 +192,7 @@
         <a href="#trending" class="tab-link">
           <i class="fa-solid fa-user"></i>
         </a>
-        <button class="tab-link">
+        <button class="tab-link dark-toggle">
           <i class="fa-solid fa-moon"></i>
         </button>
       </section>

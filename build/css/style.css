@@ -522,6 +522,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -542,12 +546,16 @@ video {
   z-index: -10;
 }
 
-.m-3 {
-  margin: 0.75rem;
+.z-10 {
+  z-index: 10;
 }
 
-.m-5 {
-  margin: 1.25rem;
+.z-30 {
+  z-index: 30;
+}
+
+.m-3 {
+  margin: 0.75rem;
 }
 
 .mx-4 {
@@ -558,11 +566,6 @@ video {
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .my-3 {
@@ -650,6 +653,10 @@ video {
   gap: 0.75rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -674,6 +681,11 @@ video {
   border-radius: 9999px;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -684,12 +696,60 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
+.bg-LA {
+  background-image: url('../assets/img/LA.jpg');
+}
+
+.bg-bali {
+  background-image: url('../assets/img/bali.jpg');
+}
+
+.bg-camboya {
+  background-image: url('https://content.skyscnr.com/m/0d04713c0776acbd/original/GettyImages-154291114_doc.jpg');
+}
+
+.bg-chicago {
+  background-image: url('../assets/img/chicago.jpg');
+}
+
+.bg-europe {
+  background-image: url('../assets/img/europe.jpg');
+}
+
+.bg-greece {
+  background-image: url('https://content.skyscnr.com/m/1cc336eac65d4364/original/h2-santorini-greece.jpg?resize=800px:600px&quality=100');
+}
+
+.bg-iceland {
+  background-image: url('../assets/img/iceland.jpg');
+}
+
+.bg-iguazu {
+  background-image: url('https://content.skyscnr.com/m/6cd9ada5314c53a9/original/GettyImages-467310275.jpg?resize=1800px:1800px&quality=100');
+}
+
+.bg-japan {
+  background-image: url('https://content.skyscnr.com/m/32ff7d25bdf290cc/original/kioto-arashiyama-bosque-bambu-editorial-use-only-viajeros-callejeros.jpg?resize=1800px:1800px&quality=100');
+}
+
+.bg-miami {
+  background-image: url('../assets/img/miami.jpg');
+}
+
 .bg-new_york {
   background-image: url('../assets/img/new_york.jpg');
 }
 
 .bg-norway {
   background-image: url('../assets/img/norway.jpg');
+}
+
+.bg-peru {
+  background-image: url('https://content.skyscnr.com/m/6e3cd168391dd764/original/GettyImages-526212233.jpg?resize=1800px:1800px&quality=100');
 }
 
 .bg-sanFrancisco {
@@ -702,6 +762,10 @@ video {
 
 .bg-switzerland {
   background-image: url('../assets/img/switzerland.jpg');
+}
+
+.bg-sydney {
+  background-image: url('../assets/img/sydney.jpg');
 }
 
 .bg-yosemite {
@@ -720,11 +784,6 @@ video {
   background-repeat: no-repeat;
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -735,10 +794,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-7 {
-  padding: 1.75rem;
 }
 
 .px-2 {
@@ -766,6 +821,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -781,6 +841,10 @@ video {
 
 .pl-5 {
   padding-left: 1.25rem;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .font-Montserrat {
@@ -810,11 +874,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-bold {
@@ -858,12 +917,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -879,9 +932,12 @@ video {
   outline-style: solid;
 }
 
-.brightness-75 {
-  --tw-brightness: brightness(.75);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-all {
@@ -890,8 +946,18 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card {
@@ -937,6 +1003,13 @@ video {
   color: rgb(97 174 201 / var(--tw-text-opacity));
 }
 
+:is(.dark .card-details-blue) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .card-details-green {
   height: 40%;
   width: 13rem;
@@ -946,6 +1019,13 @@ video {
   background-color: rgb(143 162 6 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+:is(.dark .card-details-green) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .card-title {
@@ -958,8 +1038,13 @@ video {
   font-weight: 700;
 }
 
+:is(.dark .card-title) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .card-decription {
-  white-space: nowrap;
+  overflow-wrap: break-word;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -975,6 +1060,11 @@ video {
   background-color: rgb(204 45 74 / var(--tw-bg-opacity));
 }
 
+.hover\:text-red-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -985,21 +1075,80 @@ video {
   color: rgb(204 45 74 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
-  .sm\:hidden {
+:is(.dark .dark\:bg-gray-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:text-gray-400) {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-white) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (max-width: 764px) {
+  .max-\[764px\]\:hidden {
     display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-96 {
+    height: 24rem;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:bg-sanFranciscoDesktop {
+    background-image: url('../assets/img/sanFranciscoDesktop.jpg');
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:mt-8 {
-    margin-top: 2rem;
+  .lg\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lg\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .lg\:flex {
@@ -1010,23 +1159,54 @@ video {
     display: none;
   }
 
-  .lg\:flex-row {
-    flex-direction: row;
+  .lg\:h-1\/3 {
+    height: 33.333333%;
   }
 
-  .lg\:items-start {
-    align-items: flex-start;
+  .lg\:h-\[19rem\] {
+    height: 19rem;
+  }
+
+  .lg\:h-\[28rem\] {
+    height: 28rem;
+  }
+
+  .lg\:h-\[39rem\] {
+    height: 39rem;
+  }
+
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:items-center {
     align-items: center;
   }
 
-  .lg\:justify-center {
-    justify-content: center;
+  .lg\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
-  .lg\:bg-sanFranciscoDesktop {
-    background-image: url('../assets/img/sanFranciscoDesktop.jpg');
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }

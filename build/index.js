@@ -26,6 +26,46 @@ const cardItems = [
     descCard: "Big City",
     img: "bg-switzerland",
   },
+  {
+    titleCard: "Sydney",
+    descCard: "Big City",
+    img: "bg-sydney",
+  },
+  {
+    titleCard: "Camboya",
+    descCard: "famous for their shrimps & nocturn life",
+    img: "bg-camboya",
+  },
+  {
+    titleCard: "Europe",
+    descCard: "Big City",
+    img: "bg-europe",
+  },
+  {
+    titleCard: "Iceland",
+    descCard: "Big City",
+    img: "bg-iceland",
+  },
+  {
+    titleCard: "Cataratas de Iguazú",
+    descCard: "Unique experience",
+    img: "bg-iguazu",
+  },
+  {
+    titleCard:"Greece",
+    descCard:"paradisiacal islands.",
+    img: "bg-greece"
+  },
+  {
+    titleCard:"Perú",
+    descCard:"paradisiacal islands.",
+    img: "bg-peru"
+  },
+  {
+    titleCard:"Japan",
+    descCard:"Exquisite enchantment.",
+    img: "bg-japan"
+  }
 ];
 
 //TODO dynamic card function
@@ -63,7 +103,12 @@ const dinamCard = (div = "", h1 = "", p = "", img = "") => {
     if (
       item.titleCard.includes("Norway") ||
       item.titleCard.includes("Yosemite") ||
-      item.titleCard.includes("Switzerland")
+      item.titleCard.includes("Switzerland") ||
+      item.titleCard.includes("Camboya")||
+      item.titleCard.includes("Iceland") || 
+      item.titleCard.includes("Greece") ||
+      item.titleCard.includes("Japan")
+
     ) {
       textContainer.classList.add("card-details-green");
     } else {
@@ -89,16 +134,17 @@ class Cards extends HTMLElement {
     this.imageCard = this.getAttribute("data-image");
     this.titleCard = this.getAttribute("data-title");
     this.textCard = this.getAttribute("data-text");
+
   }
 
   connectedCallback() {
     this.innerHTML = `
-    <div class="w-full h-96  my-3 relative">
-    <img class="absolute -z-10 h-full object-cover rounded-3xl shadow-md brightness-75" src=${this.imageCard} alt=${this.titleCard}>
-    <div class="py-7">
-    <h3 class="font-bold text-xl px-4 py-2 text-white">${this.titleCard}</h3>
-    <p class="mx-4 font-medium text-base leading-loose text-white">${this.textCard}</p>
-    </div>
+    <div class="w-full h-96 md:h-96 lg:h-full my-3 ${this.imageCard} bg-no-repeat bg-cover  relative z-10 bg-center rounded-3xl ">
+    <div class="w-full h-full absolute bg-opacity-40 bg-black -z-10 rounded-3xl"></div>
+      <div class="py-7 flex flex-col text-right">
+        <h3 class="font-bold text-xl px-4 py-2 text-white">${this.titleCard}</h3>
+        <p class="mx-4 font-medium text-base leading-loose text-white">${this.textCard}</p>
+      </div>
     </div>`;
   }
 }
@@ -108,12 +154,42 @@ customElements.define("app-card", Cards);
 dinamCard("div", "h3", "p");
 
 const tabLinks = document.querySelectorAll(".tab-link");
+
 tabLinks.forEach(link => {
   link.addEventListener('click', function() {
-    // Elimina la clase "active" de todos los enlaces
+    // removed  class "text-primary" of all links 
     tabLinks.forEach(allLinks => allLinks.classList.remove('text-primary'));
     
-    // Agrega la clase "active" solo al enlace clicado
+    // added class "text-primary" only at link click 
     this.classList.add('text-primary');
   });
 });
+
+
+//dark mode btn 
+
+//select both buttons
+const btnDarkMode = document.querySelectorAll(".dark-toggle")
+const htmlTag = document.querySelector("html")
+
+//for each btn we add an event click
+btnDarkMode.forEach(btn => {
+  btn.addEventListener("click",addClass)
+})
+//function for add class and saving "dark mode"
+function addClass () {
+  htmlTag.classList.toggle("dark")
+  //keeping darkmode at localstorage
+  if(htmlTag.classList.contains("dark")){
+    localStorage.setItem("dark", "true");
+  }else{
+    localStorage.setItem("dark", "false");
+  }
+}
+//getting darkmode at localstorage and adding class dark to html tag
+if(localStorage.getItem("dark") === "true"){
+  htmlTag.classList.add("dark")
+}else{
+  htmlTag.classList.remove("dark")
+}
+

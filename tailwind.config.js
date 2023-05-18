@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode:'class',
   content: ["./build/*.html","./build/*.js"],
   theme: {
     backgroundColor: (theme) => ({
@@ -33,6 +34,11 @@ module.exports = {
         chicago: "url('../assets/img/chicago.jpg')",
         europe: "url('../assets/img/europe.jpg')",
         iceland: "url('../assets/img/iceland.jpg')",
+        camboya: "url('https://content.skyscnr.com/m/0d04713c0776acbd/original/GettyImages-154291114_doc.jpg')",
+        iguazu: "url('https://content.skyscnr.com/m/6cd9ada5314c53a9/original/GettyImages-467310275.jpg?resize=1800px:1800px&quality=100')",
+        greece:"url('https://content.skyscnr.com/m/1cc336eac65d4364/original/h2-santorini-greece.jpg?resize=800px:600px&quality=100')",
+        peru:"url('https://content.skyscnr.com/m/6e3cd168391dd764/original/GettyImages-526212233.jpg?resize=1800px:1800px&quality=100')",
+        japan:"url('https://content.skyscnr.com/m/32ff7d25bdf290cc/original/kioto-arashiyama-bosque-bambu-editorial-use-only-viajeros-callejeros.jpg?resize=1800px:1800px&quality=100')"
       },
     },
   },
